@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work IS the Assessment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9fb;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+      background-color: #6c39f0;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header input {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: none;
+      width: 200px;
+    }
+    .tabs {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 2rem;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+    .tabs a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 600;
+    }
+    .container {
+      padding: 2rem;
+    }
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .skills-table th, .skills-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #eee;
+      vertical-align: top;
+    }
+    .skills-table th {
+      background-color: #f2f4f8;
+      text-align: left;
+      font-size: 0.9rem;
+    }
+    .badge {
+      padding: 0.25rem 0.5rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      color: white;
+    }
+    .badge.technical { background-color: #3b82f6; }
+    .badge.leadership { background-color: #ec4899; }
+    .action-links a {
+      margin-right: 1rem;
+      color: #6c39f0;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .rubric, .submission {
+      background: white;
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .rubric h3, .submission h3 {
+      margin-top: 0;
+    }
+    .submission-tag {
+      background: #eef;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div><strong>Work IS the Assessment</strong><br><small>Learning embedded in your daily work</small></div>
+    <input type="text" placeholder="Search...">
+    <div>Alex Morgan</div>
+  </div>
+  <div class="tabs">
+    <a href="#">Overview</a>
+    <a href="#">Skills Library</a>
+    <a href="#">Growth Plan</a>
+  </div>
+
+  <div class="container">
+    <h2>Skills Library</h2>
+    <table class="skills-table">
+      <thead>
+        <tr>
+          <th>Skill Name</th>
+          <th>Category</th>
+          <th>Real-World Application</th>
+          <th>Evidence Types</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>React Performance Optimization</td>
+          <td><span class="badge technical">Technical</span></td>
+          <td>Improving load times and responsiveness of the customer dashboard</td>
+          <td>
+            Code PRs with performance improvements<br>
+            Lighthouse score improvements<br>
+            Bundle size reduction
+          </td>
+          <td class="action-links">
+            <a href="#">View Rubric</a>
+            <a href="#">Submit Work</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Web Accessibility (WCAG)</td>
+          <td><span class="badge technical">Technical</span></td>
+          <td>Ensuring all users can access our product features regardless of abilities</td>
+          <td>
+            Accessibility audit reports<br>
+            ARIA implementation in components<br>
+            Screen reader compatibility fixes
+          </td>
+          <td class="action-links">
+            <a href="#">View Rubric</a>
+            <a href="#">Submit Work</a>
+          </td>
+        </tr>
+        <tr>
+          <td>Team Leadership</td>
+          <td><span class="badge leadership">Leadership</span></td>
+          <td>Leading sprint planning and retrospectives for the frontend team</td>
+          <td>
+            Sprint planning documents<br>
+            Retrospective facilitation<br>
+            Team feedback surveys
+          </td>
+          <td class="action-links">
+            <a href="#">View Rubric</a>
+            <a href="#">Submit Work</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rubric">
+      <h3>Skill Rubric Example – React Performance Optimization</h3>
+      <table class="skills-table">
+        <thead>
+          <tr>
+            <th>Skill Level</th>
+            <th>Evidence Types</th>
+            <th>Scoring Criteria</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>
+              Code reviews with performance comments<br>
+              Basic performance fixes in PRs
+            </td>
+            <td>
+              Identifies simple performance issues<br>
+              Implements basic optimizations (e.g., image compression)<br>
+              Understands performance metrics
+            </td>
+          </tr>
+          <tr>
+            <td>Intermediate</td>
+            <td>
+              Performance audit reports<br>
+              Component optimizations in PRs<br>
+              Bundle size reduction work
+            </td>
+            <td>
+              Implements React.memo and useMemo correctly<br>
+              Optimizes rendering cycles<br>
+              Reduces unnecessary re-renders<br>
+              Implements code splitting
+            </td>
+          </tr>
+          <tr>
+            <td>Advanced</td>
+            <td>
+              Performance strategy documents<br>
+              Complex optimization implementations<br>
+              Performance monitoring setup<br>
+              Team training materials
+            </td>
+            <td>
+              Implements advanced virtualization<br>
+              Creates performance budgets and monitoring<br>
+              Optimizes critical rendering paths<br>
+              Implements advanced state management optimizations<br>
+              Mentors others on performance best practices
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="submission">
+      <h3>Work Submission Example</h3>
+      <div class="submission-tag">
+        <strong>React Performance Optimization Submission</strong><br>
+        Submitted by Alex Morgan on May 15, 2023
+      </div>
+      <p><strong>Work Context</strong><br>Customer dashboard optimization for Project Falcon (Sprint 24)</p>
+      <p><strong>Work Evidence</strong></p>
+      <ul>
+        <li><strong>Pull Request #342:</strong> Implemented React.memo, useMemo, and useCallback to prevent unnecessary re-renders.</li>
+        <li><strong>Performance Report:</strong> 62% improvement in load time and 45% reduction in render time.</li>
+        <li><strong>Sprint Review Presentation:</strong> Shared techniques and results with team during sprint review.</li>
+      </ul>
+      <p><strong>Skill Assessment:</strong><br>
+      ●●● Intermediate → <strong>Advanced</strong> — Demonstrates advanced techniques like code splitting, memoization, and bundle size reduction.</p>
+      <p><strong>Manager Feedback:</strong><br>
+      "Alex’s work on dashboard performance optimization was exceptional. Significant, measurable improvements and high-quality code. Great application of advanced techniques to real problems." – Jamie Davis, Engineering Manager</p>
+    </div>
+  </div>
+</body>
+</html>
